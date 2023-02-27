@@ -12,7 +12,7 @@ public class SeleniumAlert {
         System.setProperty("webdriver.chrome.driver", "C:\\juaracoding\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
         driver.get("https://demoqa.com/alerts");
         System.out.println("Get URL");
         driver.manage().window().maximize();
@@ -24,6 +24,7 @@ public class SeleniumAlert {
         driver.findElement(By.id("alertButton")).click();
         driver.switchTo().alert().accept();
         System.out.println("Alert Ok Clicked");
+        //SwitchTo cuma pakai pas ada Alert atau Frame
 
         driver.findElement(By.id("timerAlertButton")).click();
         try {

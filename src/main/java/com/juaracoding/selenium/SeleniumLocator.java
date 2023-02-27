@@ -13,13 +13,20 @@ public class SeleniumLocator {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        driver.get("https://demoqa.com/text-box");
-        System.out.println("Get URL");
+
+        String url = "https://demoqa.com/text-box";
+        driver.get(url);
+        System.out.println("Get URL : " + url);
+//        driver.get("https://demoqa.com/text-box");
+//        System.out.println("Get URL");
+
         driver.manage().window().maximize(); //biar pas dibuka langsung maximized windownya
         System.out.println("Maximize Browser");
 
-        driver.getTitle();
-        System.out.println("Title Header : "+driver.getTitle());
+        String titleHeader = driver.findElement(By.className("main-header")).getText();
+        System.out.println("Title Page : " + titleHeader);
+//        driver.getTitle();
+//        System.out.println("Title Header : "+driver.getTitle());
 
         //Locator
         String title = driver.findElement(By.className("main-header")).getText();

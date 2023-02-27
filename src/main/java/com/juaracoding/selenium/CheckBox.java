@@ -10,7 +10,7 @@ public class CheckBox {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "C:\\juaracoding\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
         driver.get("https://demoqa.com/checkbox");
         System.out.println("Get URL");
         driver.manage().window().maximize();
